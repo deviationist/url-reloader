@@ -15,6 +15,9 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    'fill-green-600',
+  ],
   plugins: [],
 };
 export default config;
