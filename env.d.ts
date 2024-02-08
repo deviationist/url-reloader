@@ -1,5 +1,5 @@
 namespace NodeJS {
   interface ProcessEnv {
-    FRAME_URL: string;
+    NEXT_PUBLIC_FRAME_URL: string;
   }
 }

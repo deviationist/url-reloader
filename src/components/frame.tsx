@@ -6,10 +6,11 @@ export default function Frame() {
   const [run, setRun] = useState(false);
   const [random, setRandom] = useState(Math.random());
   const waitTime = 1000;
-  const url = process.env.FRAME_URL;
+  const url = process.env.NEXT_PUBLIC_FRAME_URL;
 
   useEffect(() => {
     if (run) {
+      //console.log('start refreshing frame');
       reloadFrame();
     }
   }, [run]);
@@ -17,10 +18,13 @@ export default function Frame() {
     setRandom(Math.random());
   };
   const onLoad = () => {
+    //console.log('frame loaded');
     if (!run) {
+      //console.log('we should quit');
       return;
     }
     setTimeout(() => {
+      //console.log('reload frame');
       reloadFrame();
     }, waitTime);
   };
